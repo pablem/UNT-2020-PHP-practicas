@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP N° 11</title>
+    <meta name="author" content="Pablo J. Palmieri">
+    <meta name="description" content="Sitio de cine. Ficha técnica y posters de películas.">
+
+    <?php
+        if(!empty($_SESSION['usuario'])) {
+            $usu = $_SESSION['usuario'];
+            if (!empty($_COOKIE['estilo_' . $usu]) && isset($_COOKIE['estilo_' . $usu]) && $_COOKIE['estilo_' . $usu] == 'clasico') {
+                $estilo = '/estilo_clas.css';
+            } else {
+                $estilo = '/estilo.css';
+            }
+        } else {
+            $estilo = '/estilo.css'; // el estilo moderno es el predeterminado
+        }
+    ?>
+
+    <link rel="stylesheet" href="<?php echo $ruta . $estilo ?>">
+</head>
+<body>
+    <header>
+        <h1>La Cuevita.tv</h1>
+    </header>

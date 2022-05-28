@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+section {
+    display: flex;
+    flex-direction: row;
+}
+header {
+    background-color: rgb(46, 55, 65);
+    color: whitesmoke;
+    padding: 1em;
+    letter-spacing: 0.4em;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+h1 {
+    margin-left: 2em;
+}
+
+/*************** MENÚ *****************/
+nav article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #EB114B;
+}
+nav article figure {
+    width: 40px;
+    margin-right: 0.5em;
+}
+nav article a {
+    color: #EB114B;
+}
+nav {
+    background-color: #dcff5f;
+    width: 25%;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav h2, nav article {
+    align-self: flex-start;
+    margin-left: 1em;
+    margin-top: 0.5em
+}
+ul {
+    list-style: none;
+}
+li {
+    text-align: center;
+}
+li a {
+    background-color: #EB114B;
+    color: whitesmoke;
+    display: block;
+    margin: 1em auto;
+    padding: 0.8em;
+    box-shadow: 3px 3px #808080;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    transition: background-color 1s ease 0s;
+}
+li a:hover, li a:focus {
+    background-color: black;
+    transition: backround-color 1s ease 0;
+}
+
+/** border-radius para todos los botones **/
+li a, article a, form a, input[type="submit"] {
+    border-radius: 50% 20% / 10% 40%; /* (first radius values) / radius; top-left-and-bottom-right / top-right-and-bottom-left */
+}
+/****/
+
+/** PRINCIPAL **/
+main h2 {
+    margin: 0.5em;
+    text-align: center;
+}
+main {
+    background-color: #dcff5f;
+    width: 100%;
+    padding: 2em 0;
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+main h2 {
+    margin-top: 1em;
+}
+main article {
+    background-color: #fff8e4;
+    width: 80%;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    box-shadow: 3px 3px #808080;
+}
+main article p {
+    margin: 1em;
+}
+/****/
+
+/** LISTADO DE DPELICULAS **/
+main article figure {
+    display: flex;
+}
+main article figure a {
+    width: 40px;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.portada {
+    width: 20%;
+    float: left;
+    margin: 0.5em;
+    margin-right: 1em;
+}
+h3 {
+    margin-top: 0.5em;
+}
+/****/
+
+/** TABLA USUARIOS**/
+table {
+    width: 50vw;
+    border: 3px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    padding: 0.5em;
+    text-align: center;
+}
+th {
+    background-color: #EB114B;
+    color: white;
+}
+td {
+    background-color: white;
+    border: 3px solid black;
+}
+main table td a {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+}
+/****/
+
+/* FORMULARIO LOGIN (y general) */
+#contenedor-login {
+    width: unset;
+}
+#contenedor-login label {
+    display: none;
+}
+legend {
+    color: #EB114B;
+    padding-left: 0.4em;
+    padding-top: 0.5em;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+input, select {
+    background-color: whitesmoke;
+    width: 90%;
+    display: block;
+    margin: 1.5em auto;
+    padding: 0.4em;
+    border-bottom: 2px solid #FF5583;
+    font-size: 1.1rem;
+}
+/****/
+
+/* FORMULARIO PELÍCULA */
+
+.contenedor-form-pelicula {
+    width: 60%;
+}
+.contenedor-form-pelicula input, .contenedor-form-pelicula label, select {
+    width: 65%;
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
+.contenedor-form-pelicula label {
+    color: #EB114B;
+    width: 25%;
+    font-size: 1.3rem;
+    text-align: right;
+}
+#portada {
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 0.5em;
+}
+#portada img {
+    opacity: 0.6;
+}
+
+/* FORMULARIO ENVIAR MAIL */
+
+#form-contactenos select, textarea {
+    background-color: white;
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    margin-top: 0;
+    border: 1px solid #EB114B;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    resize: none;
+    box-sizing: border-box;
+}
+#form-contactenos label {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* FORMULARIO BUSCAR PELÍCULA */
+
+#contenedor-busqueda {
+    width: unset;
+}
+#contenedor-busqueda form {
+    text-align: center;
+}
+#contenedor-busqueda input {
+    display: inline;
+    margin: 0;
+    margin-inline: 1em;
+}
+#contenedor-busqueda input[type="search"] {
+    width: 50%;
+}
+
+/* FORMULARIO CONFIGURAR ESTILO */
+.contenedor-form-config {
+    width: 80%;
+}
+.contenedor-form-config input {
+    width: unset;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+.contenedor-form-config figure {
+    margin: 0 2em;
+    margin-bottom: 1em;
+    
+}
+
+/* Botones en formularios (general) */
+
+input[type="submit"] { 
+    background-color: white;
+    color: #EB114B;
+    margin-top: 2em;
+    border: 2px solid #EB114B;
+    padding: 0.7em;
+    width: unset;
+    cursor: pointer;
+}
+select {
+    cursor: pointer;
+}
+
+/** Botones confirmar/cancelar alta/editar/borrar película **/
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.botones a, .botones input {
+    background-color: white;
+    color: #EB114B;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    min-width: 6em;
+    margin: 1.5em 0;
+    margin-inline: 1.5em;
+    border: 2px solid #EB114B;
+    padding: 0.7em;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem; 
+
+    /* transition: ; */
+}
+
+/** efecto de hover y de "clickeo" **/
+input[type="submit"]:focus, .botones a:focus,
+input[type="submit"]:hover, .botones a:hover {
+    color: black;
+    border-color: black;
+}
+input[type="submit"]:active, .botones a:active {
+    color: red;
+    border-color: red;
+}
+/****/
+
+/** Mensajes de la página **/
+
+.contenedor-mensaje {
+    width: unset;
+    margin-top: 3em;
+}
+.contenedor-mensaje > p {
+    color: #EB114B;
+    text-align: center;
+    font-size: 1.3rem;
+}
+/***/
+
+footer {
+    background-color: rgb(46, 55, 65);
+    color: whitesmoke;
+    padding: 1em;
+    /* height: 10vh; */
+    text-align: center;
+    box-sizing: border-box;
+}
